@@ -1,3 +1,55 @@
+
+<section id="facilities">
+    <div class = "container">
+      <div class = "title">
+          <h1>  CATEGORIES </h1> 
+           <%= link_to 'Add New Category', categories_new_path, class: "btn btn-primary far fa-plus-square" %>
+      </div>
+       
+      <div class="row">
+      <% @categories.each do |category| %>
+       <div class ="col-md-4">
+        
+        <div class ="card text-center">
+          <div class ="card-body">
+           
+                <h5 class="card-title"><%= category.title %></h5>
+                <p class="card-text"><%= category.description %></p>
+                <%= link_to ' Show',  category_show_path(category.id),class: "btn btn-success btn-sm fas fa-eye" %>
+                <%= link_to ' Edit',  category_edit_path(category.id),class: "btn btn-primary btn-sm fas fa-edit" %>
+                <%= link_to 'Delete', category_delete_path(category.id), method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger btn-sm fas fa-trash-alt" %>
+          </div>
+         
+         </div>
+          
+      </div>
+      <% end %>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <% if false %>
+
 <div class="d-flex align-items-center justify-content-center whole-body">
 
 <h1>&nbsp;&nbsp; &nbsp;  CATEGORIES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h1>  <%= link_to 'Add New Category', categories_new_path, class: "btn btn-primary far fa-plus-square" %>
@@ -50,3 +102,7 @@
 </div>
 
 </div> </div> </div>
+
+
+
+ <% end %>
