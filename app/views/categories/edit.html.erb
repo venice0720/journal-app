@@ -1,0 +1,33 @@
+<div class="d-flex align-items-center justify-content-center">
+    <h1>Edit your Category</h1>
+</div>
+<%= form_for :category,method: :put, url: category_update_path, locale: true do |f|  %>
+  <div class="container-sm">
+    <div class="mb-3">
+        <% if @category.errors.any? %>
+        <ul>
+            <% @category.errors.full_messages.each do |message| %>
+                <li class="text-danger"> <%= message %> </li>
+            <% end %>
+        </ul>
+        <% end %>
+    </div>
+    <div>
+        <%= f.label :Title,for:"exampleFormControlInput1", class: "form-label" %>
+        <%= f.text_field :title, class: "form-control",id:"exampleFormControlInput1" %>
+
+    </div>
+
+    <div>
+        <%= f.label :Notes,for:"exampleFormControlTextarea1",class:"form-label" %>
+        <%= f.text_area :description,class:"form-control",id:"exampleFormControlTextarea1", rows:"3" %>
+
+    </div>
+
+    <div>
+    <%= link_to ' Back', categories_path,class: "btn btn-success btn-md far fa-hand-point-left" %>
+    <%= f.submit class: "btn-md btn-primary"%>
+
+    </div>
+
+<% end %>

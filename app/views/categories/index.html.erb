@@ -1,0 +1,52 @@
+<div class="d-flex align-items-center justify-content-center whole-body">
+
+<h1>&nbsp;&nbsp; &nbsp;  CATEGORIES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h1>  <%= link_to 'Add New Category', categories_new_path, class: "btn btn-primary far fa-plus-square" %>
+
+</div>
+<div class="d-flex container align-items-center justify-content-center">
+<div class = " col-sm-6  align-items-center text-center ">
+
+<% @categories.each do |category| %>
+<tr class="table">
+   <div class="col-md-4">
+    <div class="card text-center" style="width: 18rem;">
+    <div class="card-body">
+     <h5 class="card-title"><%= category.title %></h5>
+    <p class="card-text"><%= category.description %></p>
+    <%= link_to ' Show',  category_show_path(category.id),class: "btn btn-success btn-sm fas fa-eye" %></td>
+    <%= link_to ' Edit',  category_edit_path(category.id),class: "btn btn-primary btn-sm fas fa-edit" %></td>
+    <%= link_to 'Delete', category_delete_path(category.id), method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger btn-sm fas fa-trash-alt" %></td>
+    </div>
+    <% if false %>
+    <table class="table">
+    <thead>
+    <tr>
+      <%# <th>ID</th> %> 
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        </tr>
+    </thead>
+<tbody>
+    <td> <%= category.title %> </td>
+    <td> <%= category.description %> </td>
+   <td> <%= link_to ' Show', category_show_path(category.id),class: "btn btn-success btn-sm fas fa-eye" %></td>
+    <td>
+        <%= link_to 'Edit', category_edit_path(category.id), class: "btn btn-primary fas fa-edit" %>
+    </td>
+     <td>
+        <%= link_to 'Delete', category_delete_path(category.id),class: "btn btn-danger fas fa-trash-alt",
+            method: :Delete, 
+            data:{confirm: 'Are you sure to delete?'}
+         %>
+    </td>
+
+</tr>
+    <% end %>
+     
+</tbody>
+</table>
+ <% end %>
+</div>
+</div>
+
+</div> </div> </div>

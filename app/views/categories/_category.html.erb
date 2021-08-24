@@ -1,0 +1,11 @@
+<div>
+    ID: <%= category.id %>
+</div>
+<div>
+    Title: <%= category.title %>
+</div>
+<div>
+   Description: <%= category.description %>
+</div>
+<td> <%= link_to ' Back', categories_path,class: "btn btn-success btn-sm far fa-hand-point-left" %></td>
+<%= link_to ' Edit',  category_edit_path(category.id),class: "btn btn-primary btn-sm fas fa-edit" %>
