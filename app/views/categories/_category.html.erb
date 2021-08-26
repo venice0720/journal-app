@@ -7,5 +7,6 @@
 <div>
    Description: <%= category.description %>
 </div>
-<td> <%= link_to ' Back', categories_path,class: "btn btn-success btn-sm far fa-hand-point-left" %></td>
-<%= link_to ' Edit',  category_edit_path(category.id),class: "btn btn-primary btn-sm fas fa-edit" %>
+<%= link_to ' Back', categories_path,class: "btn btn-success btn-sm far fa-hand-point-left" %>
+<%= link_to ' Edit',  edit_category_path(category.id),class: "btn btn-primary btn-sm fas fa-edit" %>
+<%= link_to ' Add a Task', category_tasks_path(category.id),class: "btn btn-warning btn-sm fas fa-edit" %>

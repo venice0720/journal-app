@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Journal Appy</a>
+  <a class="navbar-brand" href="/categories">Journal Appy</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,10 +8,10 @@
         <span class = "nav-item nav-link" id="date"></span>
         </p><script>var dt = new Date();
          document.getElementById("date").innerHTML=dt.toDateString();</script> 
-         <a class="nav-item nav-link" href="/categories">Dashboard</a>
-         <a class="nav-item nav-link" href="#">Journal</a>
-         <a class="nav-item nav-link" href="#">Task</a>
-         <a class="nav-item nav-link" href="#">Profile</a>
+         <%= link_to ' Dashboard',  categories_path,class: "nav-item nav-link" %>
+         <%= link_to ' Journal',  new_category_path,class: "nav-item nav-link" %>
+         <a class="nav-item nav-link" href="/">Task</a>
+         <a class="nav-item nav-link" href="/">Profile</a>
     </div>
   </div>
 </nav>
