@@ -1,7 +1,7 @@
 <div class="d-flex align-items-center justify-content-center">
     <h1>Create Journal</h1>
 </div>
-<%= form_with scope: :category,  model: [@category, @task] locale: true do |f|  %>
+<%= form_with scope: :category,  model: @category, locale: true do |f|  %>
  <div class="container-sm">
     <div class="mb-3">
         <% if @category.errors.any? %>
