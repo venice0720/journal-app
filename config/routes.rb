@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   # get '/categories/:id' => 'categories#show', as: 'category_show'
   # put '/categories/update/:id' => 'categories#update', as: 'category_update'
   # post 'categories' => 'categories#create', as: 'category_create'
-
-
+  get '/categories' => 'categories#index'
+  root to: 'categories#index'
 resources :categories do 
   resources :tasks
 end
