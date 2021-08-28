@@ -28,7 +28,12 @@
         <%= f.label 'Deadline',for:"exampleFormControlTextarea1",class:"form-label" %>
        
         <%= f.date_field :deadline,class:"form-control",id:"exampleFormControlTextarea1", rows:"3" %>
-
+    </div>
+    <div>
+        
+         <%= f.label "Is Completed?" %>
+        <%= f.check_box :iscompleted %>
+        </div>
     <%= link_to ' Back', categories_path,class: "btn btn-success btn-md far fa-hand-point-left" %>
     <%= f.submit class: " btn btn-primary btn-sm" %>
 

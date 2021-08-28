@@ -9,14 +9,16 @@
       <% @tasks.each do |task| %>
        <div class ="col-md-4">
         
-        <div class ="card text-center">
+        <div class ="card text-center text-gray bg-image shadow-1-strong" style="
+      background-image: url(/assets//wood-backround.jpg); background-size: 100% 100%; ">
           <div class ="card-body">
-           
+                <%= check_box_tag 'iscompleted', '1', task.iscompleted %>
+                <%= label_tag "Task Finish?" %>
                 <h5 class="card-title"><%= task.task_name %></h5>
                 <p class="card-text"><%= task.task_description %></p>
                 <p class="card-text"><%= task.deadline %></p>
                 <p class="card-text"><%= task.iscompleted %></p>
-                <%= link_to ' Show',  category_tasks_path(@category,task.id),class: "btn btn-success btn-sm fas fa-eye" %>
+                <%= link_to ' Show',  category_task_path(task.category_id,task.id),class: "btn btn-success btn-sm fas fa-eye" %>
                 <%= link_to ' Edit',  edit_category_task_path(@category,task.id),class: "btn btn-primary btn-sm fas fa-edit" %>
                 <%= link_to 'Delete', category_task_path(@category,task.id), method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger btn-sm fas fa-trash-alt" %>
           </div>

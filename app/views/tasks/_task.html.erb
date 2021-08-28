@@ -1,3 +1,4 @@
+<div class ="text-white">
 <div>
     ID: <%= task.id %>
 </div>
@@ -13,6 +14,6 @@
 <div>
    Task Completed?: <%= task.iscompleted %>
 </div>
-<%= link_to ' Back', tasks_path,class: "btn btn-success btn-sm far fa-hand-point-left" %>
-<%= link_to ' Edit',  task_edit_path(task.id),class: "btn btn-primary btn-sm fas fa-edit" %>
-<%= link_to ' Add a Task',  task_edit_path(task.id),class: "btn btn-warning btn-sm fas fa-edit" %>
+</div>
+<%= link_to ' Back', category_tasks_path,class: "btn btn-success btn-sm far fa-hand-point-left" %>
+<%= link_to ' Edit',  edit_category_task_path(@category,task.id),class: "btn btn-primary btn-sm fas fa-edit" %>
