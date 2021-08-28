@@ -1,3 +1,4 @@
+<div class ="text-white">
 <div>
     ID: <%= category.id %>
 </div>
@@ -7,6 +8,7 @@
 <div>
    Description: <%= category.description %>
 </div>
+</div>
 <%= link_to ' Back', categories_path,class: "btn btn-success btn-sm far fa-hand-point-left" %>
 <%= link_to ' Edit',  edit_category_path(category.id),class: "btn btn-primary btn-sm fas fa-edit" %>
-<%= link_to ' Add a Task', category_tasks_path(category.id),class: "btn btn-warning btn-sm fas fa-edit" %>
+<%= link_to ' Show Task', category_tasks_path(category.id),class: "btn btn-warning btn-sm fas fa-edit text-white" %>
