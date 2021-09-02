@@ -5,14 +5,23 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ms-auto">
-        <span class = "nav-item nav-link" id="date"></span>
+    <div class="navbar-nav ml-auto">
+        <span class = "nav-item disabled text-white nav-link" id="date"></span>
         </p><script>var dt = new Date();
-         document.getElementById("date").innerHTML=dt.toDateString();</script> 
+         document.getElementById("date").innerHTML=dt.toDateString('dd, mmmm d, yyyy');</script> 
          <%= link_to ' Dashboard',  categories_path,class: "nav-item nav-link" %>
          <%= link_to ' Journal',  new_category_path,class: "nav-item nav-link" %>
+          <a class="nav-item nav-link dropdown" href="/" id="navbarDropdown" role = "button" data-toggle="dropdown">Profile</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class = "dropdown-item" href="/">Sign Out </a>
+          <div class="dropdown-divider"> </div>
+          <a class = "dropdown-item" href="/">Edit Account </a>
+          </div>
+         </li>
          <a class="nav-item nav-link" href="/">Task</a>
-         <a class="nav-item nav-link" href="/">Profile</a>
+         <li class="nav-item dropdown">
+        
+         
     </div>
   </div>
 </nav>

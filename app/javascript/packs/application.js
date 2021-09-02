@@ -7,7 +7,18 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+// $(document).ready(function () {
+//     $("#checkbox-iscompleted").click(function () {
+//         var isDisabled = $("#checkbox-iscompleted").prop('checked')
+//         if (isDisabled) {
+//             $("#endDate_id").removeAttr("disabled");
+//         } else {
+//             $("#endDate_id").prop('disabled', true)
+//         }
+//     });
+// });

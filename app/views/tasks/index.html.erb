@@ -12,8 +12,8 @@
         <div class ="card text-center text-gray bg-image shadow-1-strong" style="
       background-image: url(/assets//wood-backround.jpg); background-size: 100% 100%; ">
           <div class ="card-body">
-                <%= check_box_tag 'iscompleted', '1', task.iscompleted %>
-                <%= label_tag "Task Finish?" %>
+             <span id ="checkbox-iscompleted">   <%= check_box_tag 'iscompleted', '1', task.iscompleted %> </span>
+                <%= label_tag "Task Completed" %>
                 <h5 class="card-title"><%= task.task_name %></h5>
                 <p class="card-text"><%= task.task_description %></p>
                 <p class="card-text"><%= task.deadline %></p>
