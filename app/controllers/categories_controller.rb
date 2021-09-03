@@ -3,7 +3,6 @@ class CategoriesController < ApplicationController
     before_action :require_user_logged_in!
     def index
         @categories = @user.categories
-        # @categories = Category.all
     end
 
     def show
@@ -28,13 +27,13 @@ class CategoriesController < ApplicationController
     end
 
     def edit
-        @category = @user.category.find(params[:id])
+        @category = @user.categories.find(params[:id])
     end
 
     def update
         @category = @user.categories.find(params[:id])
         if @category.update(category_params)
-            redirect_to user_category_path
+            redirect_to user_categories_path
         else
             render 'edit'
         end
@@ -42,7 +41,7 @@ class CategoriesController < ApplicationController
 
     def destroy
         @user = User.find(params[:user_id])
-        @category= @user.category.find(params[:id])
+        @category= @user.categories.find(params[:id])
         @category.destroy
 
         redirect_to user_categories_path
@@ -54,6 +53,9 @@ class CategoriesController < ApplicationController
     end
     def category_params
         params.require(:category).permit(:user_id,:title, :description)
+    end
+    def task_params
+        params.require(:task).permit(:task_name, :task_description, :deadline, :iscompleted, :category_id)
     end
 
 end

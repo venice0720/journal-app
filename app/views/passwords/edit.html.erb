@@ -1,5 +1,17 @@
+<section id="facilities">
+    <div class = "container">
+      <div class = "title">
+<div class="jumbotron bg-image shadow-1-strong" style="
+      background-image: url(/assets//wood-backround.jpg); background-size: 100% 100%; ">
 <h1>Edit Password</h1>
   <%= form_with model: Current.user, url: edit_password_path do |f| %>
+   <div class="form-group">
+        <div class="input-group" style="z-index: 0;">
+            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+            <%= f.password_field :password, class: 'form-control password', autocomplete: "current-password", placeholder: "Your Password" %>
+            <input type="checkbox" class="eye_icon">Show Password
+        </div>
+    </div>
     <p>
     <%= f.label 'password:'%><br>
     <%= f.password_field :password %>
@@ -9,6 +21,10 @@
     <%= f.password_field :password_confirmation %>
     </p>
     <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Update', class: "btn-primary" %>
     </p>
-  <% end %>
+<% end %>
+      </div>
+      </div>
+</section>
+

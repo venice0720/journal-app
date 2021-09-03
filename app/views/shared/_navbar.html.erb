@@ -9,19 +9,30 @@
         <span class = "nav-item disabled text-white nav-link" id="date"></span>
         </p><script>var dt = new Date();
          document.getElementById("date").innerHTML=dt.toDateString('dd, mmmm d, yyyy');</script> 
+       <% if Current.user %>
          <%= link_to ' Dashboard',  categories_path,class: "nav-item nav-link" %>
          <%= link_to ' Journal',  new_category_path,class: "nav-item nav-link" %>
-          <a class="nav-item nav-link dropdown" href="/" id="navbarDropdown" role = "button" data-toggle="dropdown">Profile</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class = "dropdown-item" href="/">Sign Out </a>
-          <div class="dropdown-divider"> </div>
-          <a class = "dropdown-item" href="/">Edit Account </a>
-          </div>
-         </li>
-         <a class="nav-item nav-link" href="/">Task</a>
-         <li class="nav-item dropdown">
+           <li class="nav-item dropdown">
+          
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         
+        <%= link_to 'Edit Password', edit_password_path, class: "dropdown-item" %>
+        <%= link_to 'Logout', logout_path, method: :delete,class: "dropdown-item" %>
          
+          <div class="dropdown-divider"></div>
+         
+        </div>
+        <% end %>
+        
+      </li>
+      </li>  
+       <% if !Current.user %>
+        <%= link_to 'Sign in',  sign_in_path,class: "nav-item nav-link" %>
+         <%= link_to 'Sign up',  sign_up_path,class: "nav-item nav-link" %>   
+       <% end %>
     </div>
   </div>
 </nav>

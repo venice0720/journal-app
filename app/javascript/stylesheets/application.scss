@@ -1,1 +1,30 @@
-@import 'bootstrap';
+@import "bootstrap";
+
+ body{
+    background-image: url(wallpaper.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+    background-attachment: fixed; 
+    font-family: "Lato", sans-serif;
+    background-position: center;
+
+}
+body .background-img {
+    /* The image used */
+    background-image: url(wallpaper.jpg);
+  
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
