@@ -12,20 +12,3 @@ Turbolinks.start()
 ActiveStorage.start()
 
 
-// $(document).ready(function () {
-//     $("#checkbox-iscompleted").click(function () {
-//         var isDisabled = $("#checkbox-iscompleted").prop('checked')
-//         if (isDisabled) {
-//             $("#endDate_id").removeAttr("disabled");
-//         } else {
-//             $("#endDate_id").prop('disabled', true)
-//         }
-//     });
-// });
-$(".eye_icon").on('click', function () {
-    if ($(".password").attr('type') === 'password') {
-        $(".password").attr('type', 'text');
-    } else {
-        $(".password").attr('type', 'password');
-    }
-});
