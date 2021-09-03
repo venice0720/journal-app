@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # get '/categories/:id' => 'categories#show', as: 'category_show'
   # put '/categories/update/:id' => 'categories#update', as: 'category_update'
   # post 'categories' => 'categories#create', as: 'category_create'
-  root 'categories#index'
+  root to: 'categories#index'
   get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'
   get 'sign_in', to: 'sessions#new'
