@@ -1,14 +1,24 @@
-<div class ="text-white">
-<div>
-    ID: <%= category.id %>
-</div>
+<section id="facilities">
+    <div class = "container">
+    
+      <div class = "title">
+      
+<div class="d-flex align-items-center justify-content-center">
+<div class="jumbotron bg-image text-gray shadow-1-strong" style="
+      background-image: url(/assets//wood-backround.jpg); background-size: 100% 100%; ">
+
 <div>
     Title: <%= category.title %>
 </div>
 <div>
    Description: <%= category.description %>
 </div>
-</div>
+
 <%= link_to ' Back', categories_path,class: "btn btn-success btn-sm far fa-hand-point-left" %>
 <%= link_to ' Edit',  edit_category_path(category.id),class: "btn btn-primary btn-sm fas fa-edit" %>
 <%= link_to ' Show Task', category_tasks_path(category.id),class: "btn btn-warning btn-sm fas fa-edit text-white" %>
+</div>
+</div>
+</div>
+</div>
+</section>

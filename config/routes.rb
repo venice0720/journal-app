@@ -29,7 +29,9 @@ Rails.application.routes.draw do
   resources :categories
   end 
   resources :categories do
+    get 'category_id/task' =>'task_today#show', as: 'task_today'
   resources :tasks
+  
 end
   # Routes for Task
   # get '/tasks' => 'tasks#show

@@ -1,7 +1,11 @@
-<div class ="text-white">
-<div>
-    ID: <%= task.id %>
-</div>
+<section id="facilities">
+    <div class = "container">
+    
+      <div class = "title">
+      
+<div class="d-flex align-items-center justify-content-center">
+<div class="jumbotron bg-image text-gray shadow-1-strong" style="
+      background-image: url(/assets//wood-backround.jpg); background-size: 100% 100%; ">
 <div>
     Task Name: <%= task.task_name %>
 </div>
@@ -13,7 +17,10 @@
 </div>
 <div>
    Task Completed?: <%= task.iscompleted %>
-</div>
-</div>
-<%= link_to ' Back', category_tasks_path,class: "btn btn-success btn-sm far fa-hand-point-left" %>
+   </div>
+   <%= link_to ' Back', category_tasks_path,class: "btn btn-success btn-sm far fa-hand-point-left" %>
 <%= link_to ' Edit',  edit_category_task_path(@category,task.id),class: "btn btn-primary btn-sm fas fa-edit" %>
+</div>
+</div>
+
+</section>

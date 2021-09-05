@@ -1,6 +1,13 @@
+<section id="facilities">
+    <div class = "container">
+    
+      <div class = "title">
+      
 <div class="d-flex align-items-center justify-content-center">
+<div class="jumbotron bg-image text-gray shadow-1-strong" style="
+      background-image: url(/assets//wood-backround.jpg); background-size: 100% 100%; ">
     <h1>Edit your Journal</h1>
-</div>
+
 <%= form_with scope: :task , method: :put, model: [@category,@task], locale: true do |f|  %>
   <div class="container-sm">
     <div class="mb-3">

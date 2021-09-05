@@ -1,0 +1,20 @@
+<div class ="text-black">
+<% if task.deadline.to_date == Date.today %>
+<div>
+    ID: <%= task.id %>
+</div>
+<div>
+    Task Name: <%= task.task_name %>
+</div>
+<div>
+   Task Description: <%= task.task_description %>
+</div>
+<div>
+   Task Deadline: <%= task.deadline %>
+</div>
+<div>
+   Task Completed?: <%= task.iscompleted %>
+</div>
+</div>
+
+<%end%>

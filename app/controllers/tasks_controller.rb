@@ -2,6 +2,7 @@ class TasksController < ApplicationController
     before_action :get_category
     def index
         @tasks = @category.tasks
+        
     end
 
     def show
@@ -14,6 +15,10 @@ class TasksController < ApplicationController
     
     def new
         @task = @category.tasks.build
+    end
+    def show_task_today
+        @tasks= Task.find(params[:id])
+
     end
 
     def create
