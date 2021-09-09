@@ -44,7 +44,6 @@ class CategoriesController < ApplicationController
         @user = User.find(params[:user_id])
         @category= @user.categories.find(params[:id])
         @category.destroy
-
         redirect_to user_categories_path
     end
 

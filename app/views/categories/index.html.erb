@@ -29,6 +29,7 @@
                 <h5 class="card-title"><%= category.title %></h5>
                 <p class="card-text"><%= category.description %></p>
                 <%= link_to ' Show', user_category_path(category.user_id,category.id),class: "btn btn-success btn-sm fas fa-eye" %>
+                <%= link_to ' Show Task', category_tasks_path(category.id),class: "btn btn-warning btn-sm fas fa-eye" %>
                 <%= link_to ' Edit',  edit_user_category_path(category.user_id,category.id),class: "btn btn-primary btn-sm fas fa-edit" %>
                 <%= link_to 'Delete', user_category_path(category.user_id,category.id), method: :Delete, data: { confirm: 'Are you sure to delete this and all of the task of it? This cannot be undone.' },class: "btn btn-danger btn-sm fas fa-trash-alt" %>
           </div>
